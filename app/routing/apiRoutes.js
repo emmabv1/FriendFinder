@@ -1,5 +1,3 @@
-
-
 const apis = (app, friends) => {
 
   var friends = require("./../data/friends.js");
@@ -30,31 +28,13 @@ app.post("/api/friends", function(req, res) {
       
     }
 
-    console.log(diff);
-
-    console.log (userScores);
-
     var min = Math.min(...diff)
 
-    console.log(min);
-
     var index = diff.indexOf(min);
-
-    console.log(index);
-
-   // var guide = friends[index+1].name;
-    //var pic = friends[index+1].photo;
-
-    //console.log(guide);
-    //console.log(pic);
 
     friends[0].hoomans.push(newUser);
 
     res.json(friends[index+1]);
-
-    // compare data with each array element
-
-    // send back best match data in modal
 
   });
 }

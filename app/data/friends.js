@@ -4,7 +4,7 @@ var friends = [
     },
     {
         name:"Rabbit",
-        photo:"../public/images/coney.png",
+        photo:"images/coney.png",
         scores:[
             1,
             1,
@@ -20,7 +20,7 @@ var friends = [
       },
       {
         name:"Snake",
-        photo:"../public/images/snake.png",
+        photo:"images/snake.png",
         scores:[
             2,
             2,
@@ -36,7 +36,7 @@ var friends = [
       },
       {
         name:"Owl",
-        photo:"../public/images/hoot.png",
+        photo:"images/hoot.png",
         scores:[
             3,
             3,
@@ -52,7 +52,7 @@ var friends = [
       },
       {
         name:"Bear",
-        photo:"../public/images/bear.png",
+        photo:"images/bear.png",
         scores:[
             4,
             4,
@@ -68,7 +68,7 @@ var friends = [
       },
       {
         name:"Duck",
-        photo:"../public/images/duck.png",
+        photo:"images/duck.png",
         scores:[
             5,
             5,

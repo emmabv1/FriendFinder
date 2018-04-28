@@ -4,16 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>FriendFinder</title>
-
-
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -165,7 +161,6 @@
   </footer>
 
   <div id="results" class="modal">
-        
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="guide">Your spirit animal</h5>
@@ -177,25 +172,13 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
-  
   </div>
-
-  
-
-
 
   <script type="text/javascript">
 
-  
-    
     $("#submit").on("click", function(event) {
 
-      
-
       event.preventDefault();
-
-      //$("#results").modal("show");
 
       function validateForm() {
         var isValid = true;
@@ -216,7 +199,6 @@
 
       if (validateForm()) {
         
-
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
@@ -238,13 +220,12 @@
         var result;
 
         $.post("/api/friends", userData, function(data){
-          //console.log (userData);
           console.log (data.name);
           console.log (data.photo);
           $("#guide").html(data.name);
 		    	$("#pic").attr("src", data.photo);
-          
         });
+
         $('#results').modal("show");
     }
 
