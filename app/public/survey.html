@@ -238,11 +238,11 @@
         var result;
 
         $.post("/api/friends", userData, function(data){
-          console.log (userData);
-          console.log (data.guide);
-          console.log (data.pic);
-          $("#guide").html(data.guide);
-		    	$("#pic").attr("src", data.pic);
+          //console.log (userData);
+          console.log (data.name);
+          console.log (data.photo);
+          $("#guide").html(data.name);
+		    	$("#pic").attr("src", data.photo);
           
         });
         $('#results').modal("show");

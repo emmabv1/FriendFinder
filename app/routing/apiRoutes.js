@@ -42,13 +42,15 @@ app.post("/api/friends", function(req, res) {
 
     console.log(index);
 
-    var guide = friends[index+1].name;
-    var pic = friends[index+1].photo;
+   // var guide = friends[index+1].name;
+    //var pic = friends[index+1].photo;
 
-    console.log(guide);
-    console.log(pic);
+    //console.log(guide);
+    //console.log(pic);
 
     friends[0].hoomans.push(newUser);
+
+    res.json(friends[index+1]);
 
     // compare data with each array element
 
